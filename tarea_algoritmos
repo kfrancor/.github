@@ -1,0 +1,421 @@
+Funcion  Expresiones_matematicas1
+	Definir a, b Como Entero
+	Definir x Como Real
+	a=3;b=7
+	Escribir "a=", a;
+	Escribir "b=", b;
+	x<-2*a+b-a mod 3;
+	Escribir "y =", " 2 * " , a , "+" , b , "-", a , " mod ", "3", "=", x;
+FinFuncion
+
+Funcion Expresiones_matemáticas2
+	Definir a,b Como Entero
+	Definir z Como Real
+	a=10;b=4
+	Escribir "a=", a;
+	Escribir "b=", b;
+	z<-a*b+3 mod a+b;
+	Escribir "z=", a, "*", b, "+", "3", "mod", a, "+", b, "=", z;
+FinFuncion
+
+Funcion Expresiones_matematicas3
+	Definir a,b Como Entero
+	Definir w Como Real
+	a=6;b=2
+	Escribir "a=", a;
+	Escribir "b=", b;
+	w<-a-b+2*a mod b;
+	Escribir "w=", a, "-", b, "+", "2", "*", a, "mod", b, "=", w;
+FinFuncion
+
+Funcion Expresiones_Matematicas4
+	Definir a,b Como Entero
+	Definir v Como Real
+	a=8;b=5
+	Escribir "a=", a;
+	Escribir "b=", b;
+	v<-2*b+a / 2+4*b mod a;
+	Escribir "v=", "2", "*", b, a, "/", "2", "+", "4", "*", b, "mod", a, "=", v; 
+FinFuncion
+
+Funcion Expresiones_Matematicas5
+	Definir a,b Como Entero
+	Definir u Como Real
+	a=12;b=9
+	Escribir "a=", a;
+	Escribir "b=", b;
+	u<-b-a+3*a mod b
+	Escribir "u=", b, "-", a, "+", "3", "*", a, "mod", b, "=", u;	
+FinFuncion
+
+Funcion Expresiones_Matematicas6
+	Definir operación Como Logico
+	operacion<-(5+3*2)+9>3*5*14 mod 3;
+	Escribir "Se mostrará si la operación a continuación, es verdadera o falsa"
+	Escribir "operación = (5 + 3 * 2)+ 9 > 3 * 5 * 14 % 3 = ", operacion;
+FinFuncion
+
+Funcion Expresiones_Matematicas7
+	Definir operacion Como Real
+	operacion<-2*(4-10+8)/2*36*(1/2);
+	Escribir "Se mostrará el resultado de la siguiente operación"
+	Escribir "operacion = 2 *(4- 10 + 8)/ 2 * 36 *(1/2) = " operacion;
+FinFuncion
+
+Funcion Expresiones_Matematicas8
+	Definir operacion Como Real
+	operacion<-260/12+54 mod 3-85 mod 7;
+	Escribir "Se mostrará el resultado de la siguiente operacion"
+	Escribir "operacion = 260 / 12 + 54 % 3 - 85 % 7 = " operacion;
+FinFuncion
+
+Funcion Expresiones_Matematicas9
+	Definir operacion Como Logico
+	operacion<-(48<2*3) | (2*7<12);
+	Escribir "Se mostrará si el resultado de esta operacion es veradero o falso"
+	Escribir "operacion = (48 < 2 * 3) || (2 * 7 < 12 ) = " operacion;
+FinFuncion
+
+Funcion Expresiones_Matematicas10
+	Definir operacion Como Logico
+	operacion<-((8>2) | (932<23)) & 4 == 2;
+	Escribir "Se mostrará el resultado de la operacion a continuación"
+	Escribir "operacion = ( ( 8 > 2 ) ||  932 < 23 ) ) && 4 == 2 = " operacion;
+FinFuncion
+
+Funcion suma_dos_numeros11
+//	Ejercicio 11 de algoritmos secuenciales
+//	Escribe un programa que tome dos números como entrada y muestre su suma
+//	Definir los dos numeros de entrada
+//	Presentar suma de salida
+//	Declarar variables
+	Definir num1, num2, suma Como Entero
+//	Inicializar las variables
+	num1=0;num2=0;suma=0
+//	Evaluar la expresión
+	Escribir "Ingrese número 1"
+//	Esperar a que el usuario ingrese un valor y presione enter
+	Leer num1
+//	Evaluar la expresión
+	Escribir "Ingrese número 2"
+//	Esperar a que el usuario ingrese un valor y presione enter
+	Leer num2
+//	Evaluar la expresión a asignar
+	suma<-num1+num2
+//	Se muestra el resultado 
+	Escribir num1,"+",num2,"=",suma
+FinFuncion
+
+Funcion área_de_triángulo12
+//	Ejercicio 12 de algoritmos secuenciales
+//	Pide al usuario que ingrese la base y la altura de un triángulo, luego calcula y muestra su área
+//	Definir base, altura y área
+//	Declarar variables
+	Definir base, altura, área Como Entero 
+//	Inicializar variables
+	base=0;altura=0;área=0
+//	Evaluar expresión
+	Escribir "Ingresar base de un triángulo"
+//	Esperar a que el usuario ingrese un valor y presione enter
+	Leer base
+//	Evaluar expresión
+	Escribir "Ingresar altura de un triángulo"
+//	Esperar a que el usuario ingrese un valor y presione enter
+	Leer altura
+//	Evaluar la expresión a asignar
+	área<-base*altura
+//	Se muestra el área total
+	Escribir base, "*",altura,"=",área
+FinFuncion
+
+Funcion  numero_par_o_impar13
+//	Ejercicio 13 de algoritmos secuenciales
+//	Solicita al usuario que ingrese un número e indica si es par o impar
+//	Evaluar expresión
+	Escribir "Ingrese un número"
+//	Esperar a que el usuario ingrese un valor y presione enter
+	Leer num
+//	Se evalua la condición para Si-Entonces
+	Si num mod 2=0 Entonces
+//		El resultado es Verdadero, se sigue por la rama del Entonces
+		Escribir "es par"
+//		Se muestra el resultado "par"
+	SiNo
+//		El resultado es Falso, se sigue por la rama del SiNo
+		Escribir "es impar"
+//		Se muestra el resultado "impar"
+	Fin Si
+FinFuncion
+
+Funcion calculadora_simple14
+	Definir num1,num2 Como Entero
+	Definir operacion Como Caracter
+	Definir resultado Como Real
+	num1=0;
+	num2=0;
+	Escribir "Ingresar primer número"
+	Leer num1;
+	Escribir "Ingresar segundo número"
+	Leer num2;
+	Escribir "Ingresar operacion matemática que desee realizar"
+	Leer operacion;
+	Segun operacion Hacer
+		"Suma":
+			resultado= a + b
+		"Resta":
+			resultado= a - b
+		"Multiplicación":
+			resultado= a * b
+		"División":
+			resultado= a / b
+	Fin Segun
+	Escribir respuesta;
+FinFuncion
+
+Funcion tabla_de_multiplicar15
+	Definir num, tabla, multiplicación Como Entero
+	num=0;
+	Escribir "Ingresar número que desee que sea multiplicado por la tabla"
+	Leer num;
+	Para tabla<-1 Hasta 10 Con Paso 1 Hacer
+		multiplicacion=num*tabla;
+		Escribir a, "*", tabla, "=", multiplicacion;
+	Fin Para
+FinFuncion
+
+Funcion copiar_palabra16
+	Definir palabra1, palabra2, oración Como Caracter
+	Escribir "Ingresar primera palabra"
+	Leer palabra1;
+	Escribir "Ingresar segunda palabra"
+	Leer palabra2;
+	oracion<-Concatenar(palabra1,palabra2);
+	Escribir " Unir = ", oracion;
+FinFuncion
+
+Funcion mayor_tres_numeros17
+	Definir num1, num2, num3 Como Entero
+	num1=0;
+	num2=0;
+	num3=0;
+	Escribir "Ingrese el tres números"
+	Leer num1, num2, num3;
+	Si (num1>num2)y(num1>num3) Entonces
+		Escribir num1, "Es el mayor"
+	Fin Si
+	Si (num2>num1)y(num2>num3) Entonces
+		Escribir num2, "Es el mayor"
+	Fin Si
+	Si (num3>num1)y(num3>num2) Entonces
+		Escribir num3, "Es el mayor"
+	Fin Si
+FinFuncion
+
+Funcion edad_minima
+	Definir edad Como Entero
+	edad=0;
+	Escribir "Ingrese su edad"
+	Leer edad;
+	Si edad>18 Entonces
+		Escribir "Es legible para votar"
+	Fin Si
+	Si edad<18 Entonces
+		Escribir "No puede votar, no tiene la edad mínima"
+	Fin Si
+FinFuncion
+
+Funcion calculadora_BMI
+	Definir peso, alt Como Real;
+	Definir bmi Como Real;
+	Escribir "Ingrese los datos de su peso en kg";
+	Leer peso;
+	Escribir "Ingrese los datos de su altura en metros";
+	Leer alt;
+	bmi=peso/(alt)^2;
+	Escribir " El resultado de su BMI es: ", bmi;
+	Si ((bmi>=18.5)y(bmi<=24.9)) Entonces
+		Escribir "Usted se encuentra en una categoría de peso saludable"
+	SiNo
+		Escribir "Usted no se encuentra dentro de la categoria de peso salubable"
+	FinSi
+FinFuncion
+
+Funcion numero_positivo
+	Definir num Como Entero
+	Escribir "Escriba un número"
+	Leer num
+	Si num==0 Entonces
+		Escribir "Es igual a cero"
+	SiNo
+		Si num<0 Entonces
+			Escribir "Es negativo"
+		SiNo
+			Escribir "Es positivo"
+		Fin Si
+	Fin Si
+FinFuncion
+
+Funcion año_bisiesto
+	Definir año Como Entero
+	Escribir "Ingrese un año"
+	Leer año;
+	Si año mod 100 <> 0 Entonces
+		Si año mod 4 = 0 Entonces
+			Escribir "Bisiesto"
+		SiNo
+			Escribir " No bisiesto"
+		Fin Si
+	SiNo
+		Si año mod 400 = 0 Entonces
+			Escribir "Bisiesto"
+		SiNo
+			Escribir "No bisiesto"
+		Fin Si
+	Fin Si
+FinFuncion
+
+Funcion signo_zodiacal
+	Definir día, mes Como Entero
+	dia=0;
+	mes=0;
+	Escribir "Ingrese su día de nacimiento"
+	Leer dia;
+	Escribir "Ingrese su mes de nacimiento (del 1 al 31)"
+	Leer mes;
+	Si (dia>=21 y mes=3) o (dia<=19 y mes=4) Entonces
+		Escribir "Su signo zodiacal es Aries"
+	Fin Si
+	Si (dia>=20 y mes=4) o (dia<=20 y mes=5) Entonces
+		Escribir "Su signo zodiacal es Tauro"
+	Fin Si
+	Si (dia>=21 y mes=5) o (dia<=20 y mes=6) Entonces
+		Escribir "Su signo zodiacal es Géminis"
+	Fin Si
+	Si (dia>=21 y mes=6) o (dia<=22 y mes=7) Entonces
+		Escribir "Su signo zodiacal es Cáncer"
+	Fin Si
+	Si (dia>=23 y mes=7) o (dia<=22 y mes=8) Entonces
+		Escribir "Su signo zodiacal es Leo"
+	Fin Si
+	Si (dia>=23 y mes=8) o (dia<=22 y mes=9) Entonces
+		Escribir "Su signo zodiacal es Virgo"
+	Fin Si
+	Si (dia>=23 y mes=9) o (dia<=22 y mes=10) Entonces
+		Escribir "Su signo zodiacal es Libra"
+	Fin Si
+	Si (dia>=23 y mes=10) o (dia<=21 y mes=11) Entonces
+		Escribir "Su signo zodiacal es Escorpio"
+	Fin Si
+	Si (dia>=22 y mes=11) o (dia<=21 y mes=12) Entonces
+		Escribir "Su signo zodiacal es Sagitario"
+	Fin Si	
+	Si (dia>=22 y mes=12) o (dia<=19 y mes=1) Entonces
+		Escribir "Su signo zodiacal es Capricornio"
+	Fin Si	
+	Si (dia>=20 y mes=1) o (dia<=18 y mes=2) Entonces
+		Escribir "Su signo zodiacal es Acuario"
+	Fin Si
+	Si (dia>=19 y mes=2) o (dia<=20 y mes=3) Entonces
+		Escribir "Su signo zodiacal es Piscis"
+	Fin Si
+FinFuncion
+
+Funcion dia_segunda_quincena
+	Definir num Como Entero
+	num=0;
+	Escribir "Ingrese un número de día del mes (1 al 31)"
+	Leer num;
+	Si num<=15 Entonces
+		Escribir "Primera quincena";
+	SiNo
+		Escribir "Segunda quincena";
+	Fin Si
+FinFuncion
+
+Funcion  dia_semana
+	Definir dia Como Entero
+	dia=0;
+	Escribir "Ingrese un número del 1 al 7"
+	Leer dia;
+	Si dia=1 Entonces
+		Escribir "Corresponde al día Domingo";
+	Fin Si
+	Si dia=2 Entonces
+		Escribir "Corresponde al día Lunes";
+	Fin Si
+	Si dia=3 Entonces
+		Escribir "Corresponde al día Martes";
+	Fin Si
+	Si dia=4 Entonces
+		Escribir "Corresponde al día Miércoles";
+	Fin Si
+	Si dia=5 Entonces
+		Escribir "Corresponde al día Jueves";
+	Fin Si
+	Si dia=6 Entonces
+		Escribir "Corresponde al día Viernes";
+	Fin Si
+	Si dia=7 Entonces
+		Escribir "Corresponde al día Sábado";
+	Fin Si
+FinFuncion
+
+Funcion frases_iguales
+	Definir frase1, frase2 Como Caracter
+	Escribir "Escriba la primera frase"
+	Leer frase1;
+	Escribir "Escriba la segunda frase"
+	Leer frase2;
+	Si frase1=frase2 Entonces
+		Escribir "Las frases son iguales"
+	SiNo
+		Escribir "Las frases no son iguales"
+	Fin Si
+FinFuncion
+
+Funcion calculadora_descuentos
+	Definir precio Como Real
+	Definir descuento Como Real
+	Escribir "Ingrese el precio del artículo"
+	Leer precio;
+	Escribir "Ingrese el porcentaje de descuento"
+	Leer descuento;
+	precio_total=precio*descuento/100
+	Escribir "Precio total del artículo es=", precio_total;
+FinFuncion
+
+	
+
+
+
+
+
+
+Algoritmo tarea1
+	Expresiones_Matematicas1()
+	Expresiones_matematicas2()
+	Expresiones_matematicas3()
+	Expresiones_Matematicas4()
+	Expresiones_Matematicas5()
+	Expresiones_Matematicas6()
+	Expresiones_Matematicas7()
+	Expresiones_Matematicas8()
+	Expresiones_Matematicas9()
+	Expresiones_Matematicas10()
+	suma_dos_numeros11()
+	área_de_triángulo12()
+	numero_par_o_impar13()
+	calculadora_simple14()
+	tabla_de_multiplicar15()
+	copiar_palabra16()
+	mayor_tres_numeros17()
+	edad_minima()
+	calculadora_BMI()
+	numero_positivo()
+	año_bisiesto()
+	signo_zodiacal()
+	dia_segunda_quincena()
+	dia_semana()
+	frases_iguales()
+	calculadora_descuentos()	
+FinAlgoritmo	
