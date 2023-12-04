@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <title>Numeros</title>
+</head>
+<body>
+    <header>
+        <h1>EXPRESIONES MATEMÁTICAS</h1>
+    </header>
+    <main> 
+        <section class="container">
+            <form action="../index.html">
+<!--form es para hacer formularios-->                
+                <label>Dado a=3 y b=7, encuentra el valor de y = 2 * a + b - a mod 3</label>           
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicioo1()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label>Si a=10 y b=4, calcula el valor de z = a * b + 3 mod a + b</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio2()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp2" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label></label>Con a=6 y b=2, determina el valor de w = a - b + 2 * a mod b
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio3()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp3" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label>Para a=8 y b=5, encuentra el valor de v = 2 * b + a div 2 + 4 * b mod a</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio4()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp4" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label>Si a=12 y b=9, calcula el valor de u = b - a + 3 * a mod b</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio5()">Ver resultado de la operación</button>                </div>
+                <div id="resp5" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label>( 5 + 3 * 2) + 9 > 3 * 5 * 14 % 3</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio6()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp6" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form>
+            <br>
+            <form action="../index.html">
+                <label>2 * ( 4 - 10 + 8) / 2 * 36 * (1 / 2)</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio7()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp7" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label> 260 / 12 + 54 % 3 - 85 % 7</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio8()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp8" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label>( 48 < 2 * 3 ) | | ( 2 * 7 < 12 )</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio9()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp9" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+            <form action="../index.html">
+                <label>( ( 8 > 2 ) | | ( 932 < 23 ) ) && 4 == 2</label>
+                <div class="botones">
+                    <button type="button" class="boton" onclick="ope.Ejercicio10()">Ver resultado de la operación</button>
+                </div>
+                <div id="resp10" class="ocultar">
+                    La respuesta es:
+                </div>
+            </form><br>
+        </section>
+    </main>
+    <script src="../js/main.js"></script>
+    <footer>
+        <div>
+            <a href="../index.html" class="boton">Regresar</a>
+        </div>
+    </footer>
+<!--Script se usa para llamar el codigo de java script a la pagina html-->
+</body>
+</html>
