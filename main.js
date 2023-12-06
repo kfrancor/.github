@@ -129,7 +129,6 @@ class Ejercicios1 {
         n1 = document.getElementById("n1").value;
         n2 = document.getElementById("n2").value;
         rr = n1 + " " + n2;
-        console.log(rr)
         document.getElementById("resp").innerHTML = rr;
     }
 
@@ -493,7 +492,15 @@ class Ejercicios1 {
     }
 
     Ejercicio46(){
-
+        let n1="", rr=0, longitud=0;
+        n1 = document.getElementById("n1").value;
+        longitud = n1.length;
+        for (let i = 0; i < longitud ; i++) {
+            if (n1.substring(i, i+1) >= "a" && n1.substring(i, i+1) <= "z" || (n1.substring(i, i+1) >= "A" && n1.substring(i, i+1) <= "Z") ) {
+                rr = rr + 1;
+            }
+        }
+        document.getElementById("resp").innerHTML = "Letras del alfabeto : " + rr;
     }
 
     Ejercicio47(){
@@ -510,20 +517,22 @@ class Ejercicios1 {
     }
 
     Ejercicio48(){
-
+        let n1="", rr=0;
+        n1 = document.getElementById("n1").value;
+        rr = n1.length;
+        document.getElementById("resp").innerHTML = "La cantidad de caracteres que tiene es :" + rr;
     }
 
     Ejercicio49(){
-        let num = 0, c;
-        c = 1;
+        let num = 0, resp=0;
         while (num>=0){
-            num = document.getElementById("num").value
-            if (num>=0){
-                c=c+1
-                document.getElementById("resp").innerHTML = `Resultado de la suma del número ingresado es: ${c}. `
+            num = parseInt(prompt("Ingresa números positivos (ingresa uno negativo si desea terminar)"));
+            if (num<0){
+                break
             }
+            resp=resp+num;
         }
-        document.getElementById("resp").innerHTML = `Al ser un número negativo, no se ha podido realizar la suma. `
+        document.getElementById("resp").innerHTML = ` La suma total es: ${resp} `
     }
 
     Ejercicio50(){
@@ -531,14 +540,290 @@ class Ejercicios1 {
         num = document.getElementById("num").value
         while (num>=1){
             if (num>=1){
-                document.getElementById("resp").innerHTML = ` ${num} `
+                document.getElementById("resp").innerHTML += ` <br> ${num} `
             }else {
-                document.getElementById("resp").innerHTML = ` Ingrese un número mayor a 1. `
+                document.getElementById("resp").innerHTML += ` Ingrese un número mayor a 1. `
             }
             num = num - 1;
+            }
+            document.getElementById("resp").innerHTML += ` <br> Fin de la cuenta regresiva`
         }
-        document.getElementById("resp").innerHTML = `Fin de la cuenta regresiva`
-    } 
+    Ejercicio51(){
+        let num="", i = 0, resp = 0, arreglo, nume, longitud;
+        num = document.getElementById("num").value
+        arreglo = num.split(",");
+        nume = arreglo.map(Number);
+        longitud = nume.length;
+        for (i=0; i < longitud; i++){
+            resp = resp + parseInt(nume[i]);
+        }
+        document.getElementById("resp").innerHTML = ` Resultado de la suma de los elementos: ${resp}.`
+    }    
+    
+    Ejercicio52(){
+        let calif="", i=0, sum=0, prom=0, arreglo, num, longitud;
+        calif = document.getElementById("cali").value
+        arreglo = calif.split(",");
+        num = arreglo.map(Number);
+        longitud = num.length;
+        for (i=0; i < longitud; i++){
+            sum = sum + num[i];
+        }
+        prom = sum / longitud;
+        prom = prom.toFixed(2);
+        document.getElementById("resp").innerHTML = ` Promedio de las calificaciones: ${prom}. `
+    }
+
+    Ejercicio53(){
+        let num="", min=0, max=0, arreglo, nume, i=0, longitud;
+        num = document.getElementById("num").value
+        arreglo = num.split(",");
+        nume = arreglo.map(Number);
+        longitud = nume.length;
+        max = parseInt(nume[0]);
+        min = parseInt(nume[0]);
+        for (i=0; i <longitud; i++){
+            if (min > nume[i]){
+                min = nume[i];
+            } else if (max < nume[i]){
+                max = nume[i];
+            }
+        }
+        document.getElementById("resp").innerHTML = `El máximo es: ${max}. `
+        document.getElementById("resp").innerHTML += `<br> El mínimo es: ${min}. `
+    }
+
+    Ejercicio54(){
+        let n1="", n2=0, arreglo, num, i=0, longitud, hola=false;
+        n1 = document.getElementById("n1").value;
+        n2 = document.getElementById("n2").value;
+        arreglo = n1.split(",");
+        num = arreglo.map(Number);
+        longitud = num.length;
+        for (i = 0; i < longitud; i++) {
+            if (n2 == num[i]) {
+                console.log("SI")
+                hola=true;
+            }
+        }
+        if (hola==true) {
+            document.getElementById("resp").innerHTML = "Si esta en el arreglo";
+        
+        } else {
+            document.getElementById("resp").innerHTML = "NO esta en el arreglo";
+        }        
+    }
+
+
+    Ejercicio55(){
+        let n1="", arreglo, num, i=0, longitud, pares, c=0;
+        n1 = document.getElementById("n1").value;
+        arreglo = n1.split(",");
+        num = arreglo.map(Number);
+        longitud = num.length;
+        for (i = 0; i < longitud; i++) {
+            if (pares == 0) {
+                c = +c + +1;
+            }
+        }
+        if (c > 0) {
+            document.getElementById("resp").innerHTML = "Pares : " + c;
+        } else {
+            document.getElementById("resp").innerHTML = "NO HAY PARES";
+        }       
+    }
+
+
+    Ejercicio56(){
+        let n1="", arreglo, num, i=0, longitud, arreglo2="";
+        n1 = document.getElementById("n1").value;
+        arreglo = n1.split(",");
+        num = arreglo.map(Number);
+        longitud = num.length;
+        for (i = longitud-1; i >= 0; i--) {
+            arreglo2 += num[i] + ",";
+        }
+        document.getElementById("resp").innerHTML = "La inversion : " + arreglo2;
+    }
+
+
+    Ejercicio57() {
+        let num= [];
+        let indices= [];
+        let n1 = 0, longitud=0;
+        n1 = parseInt(document.getElementById("n1").value);
+        
+        for (let i = 0; i < 5; i++) {
+            num[i]= parseInt((Math.random()*9));       
+        }        
+        for (let i = 0; i < num.length; i++) {
+            if (num[i] == n1) {
+                indices.push(i);
+            }
+        }
+        longitud = indices.length;
+        if (longitud > 1) {
+            document.getElementById("resp").innerHTML = "Se repite algunas veces, se presenta arreglo :" + num;
+
+        } else if (longitud == 1) {
+            document.getElementById("resp").innerHTML = "Se repite una vez";
+        } else {
+            document.getElementById("resp").innerHTML = "No se encontro";
+        }
+    }
+
+
+    //FUNCION SALUDAR SIN PARAMETROS
+    Ejercicio58() {
+        document.getElementById("resp").innerHTML = "Hola amigo";
+    }
+
+
+    //AQUI EMPIEZA EJERCICIO DE FUNCION DE SUMA DE DOS NUMEROS
+    SUMA(n1,n2) {
+        let rr = +n1 + +n2;
+        document.getElementById("resp").innerHTML = "La suma es : " + rr;
+    }
+
+    Ejercicio59() {
+        let n1=0, n2=0;
+        n1 = parseInt(document.getElementById("n1").value);
+        n2 = parseInt(document.getElementById("n2").value);
+        this.SUMA(n1,n2);
+    }
+    //AQUI TERMINA EL EJERCICIO DE SUMA DE DOS NUMEROS CON FUNCION Y PARAMETROS
+
+
+
+    //AQUI EMPIEZA EJERCICIO DE FUNCION DE MULTIPLICACION DE DOS NUMEROS CON RETURN
+    MULTIPLICACION(n1,n2) {
+        let rr = 0;
+        rr = n1 * n2;
+        return rr;
+    }
+
+    Ejercicio60() {
+        let n1=0, n2=0, resultado=0;
+        n1 = document.getElementById("n1").value;
+        n2 = document.getElementById("n2").value;
+        resultado = this.MULTIPLICACION(n1,n2);
+        document.getElementById("resp").innerHTML = "Resultado es : " + resultado;
+    }
+    //AQUI TERMINA EL EJERCICIO DE FUNCION MULTIPLICACION DE DOS NUMEROS CON PARAMETRO Y RETURN
+
+    //AQUI EMPIEZA EL EJERCICIO DE FUNCION SIN RETURN PARA DETERMINAR SI ES PAR O IMPAR
+    NOTPAR(n1) {
+        let par = n1 % 2;
+        if (par == 0) {
+            document.getElementById("resp").innerHTML = "Es par el numero ingresado";
+        } else {
+            document.getElementById("resp").innerHTML = "Es impar el numero ingresado";
+        }
+    }
+
+
+    Ejercicio61() {
+        let n1=0;
+        n1 = document.getElementById("n1").value;
+        this.NOTPAR(n1);
+    }
+    //AQUI SE TERMINA EL EJERICICIO DE FUNCION SIN RETURN PARA DETERMINAR SI ES PAR O IMPAR
+    
+    //AQUI EMPIEZA EJERCICIO DE AREA DE UN TRIANGULO CON PARAMETROS Y RETURN
+    BASE(n1,n2) {
+        let rr = (n1 * n2) / 2;
+        return rr;
+    }
+
+    Ejercicio62() {
+        let n1=0, n2=0, resultado=0;
+        n1 = document.getElementById("n1").value;
+        n2 = document.getElementById("n2").value;
+        resultado = this.BASE(n1,n2);
+        document.getElementById("resp").innerHTML = "El area es :" + resultado;
+    }
+    //AQUI TERMINA EL EJERCICIO DE AREA DE UN TRIANGULO CON PARAMETROS Y RETURN
+
+    //AQUI EMPIEZA FUNCION IMPRIME TU NOMBRE SIN PARAMETROS
+    NAME(){
+        let n1 = "";
+        n1 = document.getElementById("n1").value;
+        document.getElementById("resp").innerHTML = "Hola " + n1;
+    }
+      
+    Ejercicio63() {
+        this.NAME();
+    }
+
+    //AQUI TERMINA FUNCION IMPRIME TU NOMBRE SIN PARAMETROS
+
+    //AQUI EMPIEZA LA FUNCION CONVERSION DE CELSIUS A FARENHEIT CON RETURN
+    CONVERSION(n1) {
+       let rr = ( n1 * 9 / 5) + 32;
+       return rr;
+    }
+    
+    Ejercicio64() {
+        let n1=0, resultado=0;
+        n1 = parseFloat(document.getElementById("n1").value);
+        resultado = this.CONVERSION(n1);
+        resultado = resultado.toFixed(2);
+        document.getElementById("resp").innerHTML = "Resultado de la conversion : " + resultado;
+
+    }
+
+    //AQUI TERMINA LA FUNCION CONVERSION DE CELSIUS A FARENHEIT CON RETURN
+
+    //AQUI EMPIEZA FUNCION PARA CONTAR CARACTERES CON PARAMETROS
+    CARACTER(n1) {
+        let rr = 0;
+        rr = n1.length;
+        document.getElementById("resp").innerHTML = "La cantidad de caracteres es : " + rr;
+    }
+
+    Ejercicio65() {
+        let n1="";
+        n1 = document.getElementById("n1").value;
+        this.CARACTER(n1);
+    }
+
+    //AQUI TERMINA FUNCION PARA CONTAR CARACTERES CON PARAMETROS
+
+    //AQUI EMPIEZA FUNCION PARA IMPRIMIR NUMEROS SIN RETURN DEL 1 AL 10
+    IMP1AL10() {
+        let i = 0;
+        for (i = 1; i < 11; i++) {
+            document.getElementById("resp").innerHTML += "<br> " + i;
+
+        }
+    }
+
+    Ejercicio66() {
+        this.IMP1AL10();
+    }
+
+    //AQUI TERMINA FUNCION PARA IMPRIMIR NUMEROS SIN RETURN DEL 1 AL 10
+
+    //AQUI EMPIEZA FUNCION PARA SUMAR ELEMENTOS CON PARAMETROS Y RETURN
+    SUMATORIA(n1) {
+        let rr = 0, arreglo, num, acu=0, longitud;
+        arreglo = n1.split(",");
+        num = arreglo.map(Number);
+        longitud = num.length;
+        for (let i = 0; i < longitud; i++) {
+            acu = acu + num[i];
+
+        }
+        return acu;
+    }
+
+    
+    Ejercicio67() {
+        let n1="", resultado=0;
+        n1 = document.getElementById("n1").value;
+        resultado = this.SUMATORIA(n1);
+        document.getElementById("resp").innerHTML = "La SUMA de los elementos : " + resultado;
+    }
 }
 
 let ope = new Ejercicios1() //crear variable igual que la clase
